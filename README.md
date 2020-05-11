@@ -9,7 +9,7 @@ It's a minimalistic set of libraries collated together for making small throw aw
 
 The main goal is to be able to generate a graal native-image with 0 additional descriptors (especially the reflection one).
 
-You can see a demo here:  https://github.com/digitalfondue/ni-httpsuite-example
+You can see a demo here for google cloud run:  https://github.com/digitalfondue/ni-httpsuite-example
 
 Based on:
 
