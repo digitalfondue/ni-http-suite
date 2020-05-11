@@ -9,7 +9,7 @@ It's a minimalistic set of libraries collated together for making small throw aw
 
 The main goal is to be able to generate a graal native-image with 0 additional descriptors (especially the reflection one).
 
-You can see a demo here for google cloud run:  https://github.com/digitalfondue/ni-httpsuite-example
+You can see a demo here for google cloud run:  https://github.com/digitalfondue/ni-http-suite-example
 
 Based on:
 
@@ -43,5 +43,5 @@ ni-http-suite is licensed under the Apache License Version 2.0.
 
 Code: https://github.com/digitalfondue/ni-http-suite/blob/master/src/test/java/ch/digitalfondue/nihttpsuite/Example.java
 
-Full example for google cloud run (with Docker file...): https://github.com/digitalfondue/ni-httpsuite-example
+Full example for google cloud run (with Docker file...): https://github.com/digitalfondue/ni-http-suite-example
 
