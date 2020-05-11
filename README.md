@@ -14,7 +14,7 @@ Based on:
  
 ## License
 
-vatchecker is licensed under the Apache License Version 2.0.
+ni-http-suite is licensed under the Apache License Version 2.0.
 
 ## Example
 
