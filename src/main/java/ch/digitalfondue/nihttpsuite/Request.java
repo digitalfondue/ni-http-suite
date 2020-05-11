@@ -33,55 +33,55 @@ public interface Request {
     /**
      * Get list of header names.
      *
-     * @return
+     * @return header names
      */
     List<String> getHeaderNames();
 
     /**
      * Get list of headers with the given name.
      *
-     * @param name
-     * @return
+     * @param name of the http header
+     * @return header values
      */
     List<String> getHeaders(String name);
 
     /**
      * Return first header value for a given name.
      *
-     * @param name
-     * @return
+     * @param name of the http header
+     * @return first header value
      */
     Optional<String> getHeader(String name);
 
     /**
      * Get first value for given query parameter name.
      *
-     * @param name
-     * @return
+     * @param name of the query parameter
+     * @return query parameter value
      */
     Optional<String> getQueryParameter(String name);
 
     /**
      * Get all values for given query parameter name.
      *
-     * @param name
-     * @return
+     * @param name of the query parameter
+     * @return query parameter values
      */
     List<String> getQueryParameters(String name);
 
     /**
      * Get context. See {@link Context}
      *
-     * @return
+     * @return context.
      */
     Context context();
 
     /**
      * Get value of path variable defined in route.
-     * For example: "/my/{var}" -> path is "/my/test" -> getPathVariable("var") return "test".
+     * For example: "/my/{var}", path is "/my/test": getPathVariable("var") return "test".
      *
-     * @param name
-     * @return
+     * @param name of the path variable
+     * @return path variable value.
      */
     String getPathVariable(String name);
 }
