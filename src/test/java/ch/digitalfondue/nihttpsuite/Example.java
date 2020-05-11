@@ -17,11 +17,10 @@ package ch.digitalfondue.nihttpsuite;
 
 
 import javax.json.Json;
-import java.io.IOException;
 
 public class Example {
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws Exception {
         Server.configure()
                 .listenerPort(8080)
                 .route()

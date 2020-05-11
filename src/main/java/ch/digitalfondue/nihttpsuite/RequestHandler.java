@@ -15,10 +15,8 @@
  */
 package ch.digitalfondue.nihttpsuite;
 
-import java.io.IOException;
-
 @FunctionalInterface
 public interface RequestHandler {
-    void handle(Request request, Response response) throws IOException;
+    void handle(Request request, Response response) throws Exception;
 }
 

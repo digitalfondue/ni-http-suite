@@ -180,18 +180,23 @@ public final class Server {
             //
         }
         String method = request.getMethod();
-        if (staticRoutes.containsKey(requestPath) && staticRoutes.get(requestPath).containsKey(method)) {
-            staticRoutes.get(requestPath).get(method).handler.handle(new RequestWrapper(request, requestPath, rawQuery, context, null), new ResponseWrapper(response));
-            return;
-        } else {
-            for (var handler : pathVariableRoutes) {
-                Matcher matcher = handler.match(requestPath);
-                if (matcher != null) {
-                    handler.handler.handle(new RequestWrapper(request, requestPath, rawQuery, context, matcher), new ResponseWrapper(response));
-                    return;
+        try {
+            if (staticRoutes.containsKey(requestPath) && staticRoutes.get(requestPath).containsKey(method)) {
+                staticRoutes.get(requestPath).get(method).handler.handle(new RequestWrapper(request, requestPath, rawQuery, context, null), new ResponseWrapper(response));
+                return;
+            } else {
+                for (var handler : pathVariableRoutes) {
+                    Matcher matcher = handler.match(requestPath);
+                    if (matcher != null) {
+                        handler.handler.handle(new RequestWrapper(request, requestPath, rawQuery, context, matcher), new ResponseWrapper(response));
+                        return;
+                    }
                 }
             }
-
+        } catch (IOException e) {
+            throw e;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
 
         response.setCode(HttpStatus.SC_NOT_FOUND);
