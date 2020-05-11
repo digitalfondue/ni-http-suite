@@ -24,14 +24,14 @@ maven:
 <dependency>
     <groupId>ch.digitalfondue.ni-http-suite</groupId>
     <artifactId>ni-http-suite</artifactId>
-    <version>0.0.1</version>
+    <version>0.1.1</version>
 </dependency>
 ```
 
 gradle:
 
 ```
-compile 'ch.digitalfondue.ni-http-suite:ni-http-suite:0.0.1'
+compile 'ch.digitalfondue.ni-http-suite:ni-http-suite:0.1.1'
 ```
 
  
