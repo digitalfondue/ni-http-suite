@@ -169,7 +169,7 @@ public final class Server {
         }
     }
 
-    private void dispatch(ClassicHttpRequest request, ClassicHttpResponse response, HttpContext context) throws IOException {
+    private void dispatch(ClassicHttpRequest request, ClassicHttpResponse response, HttpContext context) {
         String requestPath = "/";
         String rawQuery = "";
         try {
@@ -193,10 +193,11 @@ public final class Server {
                     }
                 }
             }
-        } catch (IOException e) {
-            throw e;
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            response.setCode(HttpStatus.SC_SERVER_ERROR);
+            response.setEntity(new StringEntity("500 server error", ContentType.TEXT_HTML));
+            e.printStackTrace(System.err);
+            return;
         }
 
         response.setCode(HttpStatus.SC_NOT_FOUND);
