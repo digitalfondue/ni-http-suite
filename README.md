@@ -41,6 +41,7 @@ ni-http-suite is licensed under the Apache License Version 2.0.
 
 ## Example
 
-Code https://github.com/digitalfondue/ni-http-suite/blob/master/src/test/java/ch/digitalfondue/nihttpsuite/Example.java
+Code: https://github.com/digitalfondue/ni-http-suite/blob/master/src/test/java/ch/digitalfondue/nihttpsuite/Example.java
+
 Full example for google cloud run (with Docker file...): https://github.com/digitalfondue/ni-httpsuite-example
 
